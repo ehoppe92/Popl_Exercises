@@ -1,0 +1,7 @@
+INDEX VERSION 1.3+/Users/Elisabeth/Documents/workspace/POPL_Exercises/Ex02/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+3339447661.index
+2664416287.index
+3750533185.index
+2582443629.index
+996776417.index
+483697875.index
