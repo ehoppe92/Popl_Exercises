@@ -1,0 +1,22 @@
+Animal.Bird = function(name, carnivore, wingSpan){
+	//calling super constructor
+	Animal.Bird.call(this);
+	//da abstrakte Klasse
+	if(this.constructor === Bird){
+		throw new Error ("Cannot instatiate abstract class");
+	}
+	
+	this.mWingSpan = this.setWingSpan(wingSpan);
+	
+	this.setWingSpan = function(wingSpan){
+		
+		this.mWingSpan = wingSpan;
+		
+	}
+	
+	this.getWingSpan = function(){
+		
+		return this.mWingSpan;
+	}
+	
+};

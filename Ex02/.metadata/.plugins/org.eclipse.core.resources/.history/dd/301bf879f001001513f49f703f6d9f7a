@@ -2,13 +2,15 @@ var Animal = function(name, carnivore){
 	
 	//da abstrakte Klasse
 	if(this.constructor === Animal){
+		
 		throw new Error ("Cannot instatiate abstract class");
+		
 	}
 	
 	//private Eigenschaften
-	var pCarnivore = this.setCarnivore(carnivore); //boolean
+	var pCarnivore = this.setCarnivore(); //boolean
 	var pId = Animal.generateID(); //int
-	var pName = this.setName(name); //String
+	var pName = this.setName; //String
 	
 	
 	Animal.generateID = function(){
@@ -48,15 +50,6 @@ Animal.prototype.isCarnivore = function(){
 Animal.prototype.toString = function(){
 	//not implemented - abstract 
 	throw new Error ("Absract method!");
-}
-
-Animal.prototype.setCarnivore = function(carnivore){
-	pCarnivore = carnivore;
-	
-}
-
-Animal.prototype.setName = function(name){
-	pName = name;
 }
 
 
