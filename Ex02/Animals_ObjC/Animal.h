@@ -1,20 +1,20 @@
-static int idCounter;
+//static int idCounter;
 
 @interface Animal:NSObject
 {
     //Instanzvariablen
     @private
-    bool carnivore;
+    BOOL carnivore;
     int id;
-    NSString* name;
+    NSMutableString* name;
 
 }
-+ (void) initialize;
-- (void)initWithParams: (NSString*)name_ carnivore:(bool)carnivore_;
+//+ (void) initialize;
+- (void)initWithParams: (NSMutableString*)name_ carnivore:(bool)carnivore_;
 - (bool)equals: (Animal)animal_;
-- (NSString*)getName;
+- (NSMutableString*)getName;
 - (bool)isCarnivore;
 - (void)setCarnivore: (bool)carnivore_;
-- (void)setName: (NSString*)name_;
+- (void)setName: (NSMutableString*)name_;
 - (void)toString;
 @end

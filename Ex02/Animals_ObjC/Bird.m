@@ -6,12 +6,12 @@
 //
 //
 
-#import <Foundation/Foundation.h>
+#import "Animal.h"
 @implementation Bird
 
-- (void)initWithParams: (NSString*)name_ carnivore:(bool)carnivore_ wingSpan(double)wingSpan_
+- (void)initWithParams: (NSMutableString*)name_ carnivore:(BOOL)carnivore_ wingSpan(double)wingSpan_
 {
-    self=[super initWithParams: name_, carnivore_];
+    self=[super initWithParams:name_  carnivore:carnivore_];
     if(self){
         self.wingSpan = wingSpan_;
     }

@@ -6,16 +6,17 @@
 //
 //
 
-#import <Foundation/Foundation.h>
+#import "Animal.h"
 
 @implementation Animal
 
-+ (void) initialize
+static int idCounter = 0;
+/*+ (void) initialize
 {
     idCounter = 0;
-}
+}*/
 
-- (void)initWithParams: (NSString*)name_ carnivore:(bool)carnivore_
+- (void)initWithParams: (NSMutableString*)name_ carnivore:(BOOL)carnivore_
 {
     self = [super init];
     
@@ -26,6 +27,9 @@
         self.carnivore = carnivore_;
         
     }
+    
+    idCounter++;
+    
     return self;
 }
 
@@ -38,7 +42,7 @@
     
 }
 
-- (NSString*)getName
+- (NSMutableString*)getName
 {
     return self.name;
 }
@@ -53,7 +57,7 @@
     self.carnivore = carnivore_;
 }
 
-- (void)setName: (NSString*)name_
+- (void)setName: (NSMutableString*)name_
 {
     self.name = name_;
 }

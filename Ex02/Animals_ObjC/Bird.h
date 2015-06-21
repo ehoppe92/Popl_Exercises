@@ -13,7 +13,7 @@
     @public
     double wingSpan;
 }
-- (void)initWithParams: (NSString*)name_ carnivore:(bool)carnivore_;
+- (void)initWithParams: (NSMutableString*)name_ carnivore:(BOOL)carnivore_;
 - (double)getWingSpan;
 - setWingSpan: (double)wingSpan_;
 

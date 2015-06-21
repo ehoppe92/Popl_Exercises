@@ -13,7 +13,7 @@
     @private
     double bodyTemperature;
 }
-- (void)initWithParams: (NSString*)name_ carnivore:(bool)carnivore_ bodyTemperature:(double)bodyTemperature_;
+- (void)initWithParams: (NSMutableString*)name_ carnivore:(BOOL)carnivore_ bodyTemperature:(double)bodyTemperature_;
 
 - (double)getBodyTemperature;
 - (void)setBodyTemperature: (double)bodyTemperature_;

@@ -6,12 +6,12 @@
 //
 //
 
-#import <Foundation/Foundation.h>
+#import "Mammal.h"
 
 @implementation Mammal
-- (void) initWithParams: (NSString* name)name_ carnivore(bool)carnivore_;
+- (void) initWithParams: (NSMutableString* name)name_ carnivore(BOOL)carnivore_;
 {
-    self = [super init:name_,carnivore_];
+    self = [super init:name_ carnivore:carnivore_];
     return self;
 }
 

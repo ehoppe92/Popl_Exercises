@@ -6,13 +6,12 @@
 //
 //
 
-#import <Foundation/Foundation.h>
-
+#import "Reptile.h"
 @implementation Reptile
 
--(void)initWithParams: (NSString*)name_ carnivore:(bool)carnivore_ bodyTemperature:(double)bodyTemperature_
+-(void)initWithParams: (NSMutableString*)name_ carnivore:(BOOL)carnivore_ bodyTemperature:(double)bodyTemperature_
 {
-    self=[super init: name_, carnivore_];
+    self=[super init: name_ carnivore:carnivore_];
     
     if(self){
         

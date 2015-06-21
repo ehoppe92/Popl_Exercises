@@ -10,7 +10,7 @@
 #define _Mammal_h
 
 @interface Mammal:Animal
-- (void) initWithParams: (NSString*)name_ carnivore:(bool)carnivore_;
+- (void) initWithParams: (NSMutableString*)name_ carnivore:(BOOL)carnivore_;
 @end
 
 
