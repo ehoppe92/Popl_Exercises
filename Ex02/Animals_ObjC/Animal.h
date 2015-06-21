@@ -1,5 +1,7 @@
 //static int idCounter;
 
+#import <Foundation/Foundation.h>
+
 @interface Animal:NSObject
 {
     //Instanzvariablen
@@ -10,11 +12,11 @@
 
 }
 //+ (void) initialize;
-- (void)initWithParams: (NSMutableString*)name_ carnivore:(bool)carnivore_;
-- (bool)equals: (Animal)animal_;
+- (id)initWithParams: (NSMutableString*)name_ carnivore:(BOOL)carnivore_;
+- (BOOL)equals: (Animal*)animal_;
 - (NSMutableString*)getName;
-- (bool)isCarnivore;
-- (void)setCarnivore: (bool)carnivore_;
+- (BOOL)isCarnivore;
+- (void)setCarnivore: (BOOL)carnivore_;
 - (void)setName: (NSMutableString*)name_;
 - (void)toString;
 @end

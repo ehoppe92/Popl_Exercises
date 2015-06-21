@@ -6,6 +6,8 @@
 //
 //
 
+#import "Animal.h"
+
 #ifndef _Bird_h
 #define _Bird_h
 @interface Bird:Animal
@@ -13,9 +15,9 @@
     @public
     double wingSpan;
 }
-- (void)initWithParams: (NSMutableString*)name_ carnivore:(BOOL)carnivore_;
+- (id)initWithParams: (NSMutableString*)name_ carnivore:(BOOL)carnivore_ wingSpan:(double) wingSpan_;
 - (double)getWingSpan;
-- setWingSpan: (double)wingSpan_;
+- (void)setWingSpan: (double)wingSpan_;
 
 
 @end

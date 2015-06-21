@@ -16,15 +16,15 @@ static int idCounter = 0;
     idCounter = 0;
 }*/
 
-- (void)initWithParams: (NSMutableString*)name_ carnivore:(BOOL)carnivore_
+- (id)initWithParams: (NSMutableString*)name_ carnivore:(BOOL)carnivore_
 {
     self = [super init];
     
     if(self)
     {
         
-        self.name = name_;
-        self.carnivore = carnivore_;
+        name = name_;
+        carnivore = carnivore_;
         
     }
     
@@ -33,7 +33,7 @@ static int idCounter = 0;
     return self;
 }
 
-- (bool)equals: (Animal)animal_
+- (BOOL)equals: (Animal*)animal_
 {
     
     //evtl mit isEqual message??
@@ -44,22 +44,22 @@ static int idCounter = 0;
 
 - (NSMutableString*)getName
 {
-    return self.name;
+    return name;
 }
 
-- (bool)isCarnivore
+- (BOOL)isCarnivore
 {
-    return self.carnivore;
+    return carnivore;
 }
 
-- (void)setCarnivore: (bool)carnivore_
+- (void)setCarnivore: (BOOL)carnivore_
 {
-    self.carnivore = carnivore_;
+    carnivore = carnivore_;
 }
 
 - (void)setName: (NSMutableString*)name_
 {
-    self.name = name_;
+    name = name_;
 }
 
 - (void)toString

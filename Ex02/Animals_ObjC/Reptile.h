@@ -8,12 +8,17 @@
 
 #ifndef _Reptile_h
 #define _Reptile_h
+
+#import "Animal.h"
+
+
+
 @interface Reptile:Animal
 {
     @private
     double bodyTemperature;
 }
-- (void)initWithParams: (NSMutableString*)name_ carnivore:(BOOL)carnivore_ bodyTemperature:(double)bodyTemperature_;
+- (id)initWithParams: (NSMutableString*)name_ carnivore:(BOOL)carnivore_ bodyTemperature:(double)bodyTemperature_;
 
 - (double)getBodyTemperature;
 - (void)setBodyTemperature: (double)bodyTemperature_;

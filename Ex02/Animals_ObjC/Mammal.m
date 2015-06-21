@@ -8,10 +8,10 @@
 
 #import "Mammal.h"
 
-@implementation Mammal
-- (void) initWithParams: (NSMutableString* name)name_ carnivore(BOOL)carnivore_;
+@implementation Mammal:Animal
+- (id) initWithParams: (NSMutableString*)name_ carnivore:(BOOL)carnivore_
 {
-    self = [super init:name_ carnivore:carnivore_];
+    self = [super initWithParams:name_ carnivore:carnivore_];
     return self;
 }
 

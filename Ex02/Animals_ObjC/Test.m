@@ -22,9 +22,14 @@ int main (int argc, const char * argv[])
         Animal* animal;
         animal = [Animal new];
         
-        animal = [animal initWithParams:"TestAnimal1" carnivore: YES ];
+        //create string for the name
+        //NSMutableString* animalname  = [[NSMutableString alloc] initWithString:@"Testanimal1"];
+       
+        //animal = [animal initWithParams:animalname carnivore: YES ];
         
-        printf("Animal: name: %@,  carnivore:%d", [animal getName], [animal isCarnivore]);
+        [animal setCarnivore:YES];
+
+        printf("Animal:  carnivore:%d", [animal isCarnivore]);
 
     }
     

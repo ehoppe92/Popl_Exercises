@@ -7,11 +7,11 @@
 //
 
 #import "Reptile.h"
-@implementation Reptile
+@implementation Reptile:Animal
 
--(void)initWithParams: (NSMutableString*)name_ carnivore:(BOOL)carnivore_ bodyTemperature:(double)bodyTemperature_
+-(id)initWithParams:(NSMutableString*)name_ carnivore:(BOOL)carnivore_ bodyTemperature:(double)bodyTemperature_
 {
-    self=[super init: name_ carnivore:carnivore_];
+    self=[super initWithParams: name_ carnivore:carnivore_];
     
     if(self){
         
@@ -21,12 +21,12 @@
     return self;
 }
 
--(void)setBodyTemperature: bodyTemperature(double)bodyTemperature_{
+-(void)setBodyTemperature: (double)bodyTemperature_{
     self.bodyTemperature = bodyTemperature_;
 }
 
 -(double)getBodyTemperature{
-    return self.bodyTemperature;
+    return bodyTemperature;
 }
 
 @end

@@ -6,11 +6,13 @@
 //
 //
 
+#import "Animal.h"
+
 #ifndef _Mammal_h
 #define _Mammal_h
 
 @interface Mammal:Animal
-- (void) initWithParams: (NSMutableString*)name_ carnivore:(BOOL)carnivore_;
+- (id) initWithParams: (NSMutableString*)name_ carnivore:(BOOL)carnivore_;
 @end
 
 

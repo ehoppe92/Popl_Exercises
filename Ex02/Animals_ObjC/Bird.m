@@ -7,9 +7,11 @@
 //
 
 #import "Animal.h"
-@implementation Bird
+#import "Bird.h"
 
-- (void)initWithParams: (NSMutableString*)name_ carnivore:(BOOL)carnivore_ wingSpan(double)wingSpan_
+@implementation Bird:Animal
+
+- (id)initWithParams: (NSMutableString*)name_ carnivore:(BOOL)carnivore_ wingSpan:(double)wingSpan_
 {
     self=[super initWithParams:name_  carnivore:carnivore_];
     if(self){
@@ -18,10 +20,11 @@
     return self;
 }
 
-- (double)getWingSpan{
-    return self.wingSpan;
-}
-
 - (void)setWingSpan: (double)wingSpan_{
     self.wingSpan = wingSpan_;
 }
+
+- (double)getWingSpan{
+    return wingSpan;
+}
+@end
