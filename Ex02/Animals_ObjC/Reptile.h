@@ -22,7 +22,7 @@
 
 - (double)getBodyTemperature;
 - (void)setBodyTemperature: (double)bodyTemperature_;
-- (void)toString;
+//- (void)toString;
 - (BOOL) equals: (Reptile*)reptile;
 
 @end

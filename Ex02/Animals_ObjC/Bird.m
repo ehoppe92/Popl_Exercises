@@ -30,15 +30,15 @@
     return wingSpan;
 }
 
-- (void)toString
+/*- (void)toString
 {
     //TODO
-}
+}*/
 
 -(BOOL) equals:(Bird *)bird
 {
     //check the super class equality
-    BOOL animalEqualiy = [super equals:self];
+    BOOL animalEqualiy = [super equals:bird];
     
     if(animalEqualiy == YES)
     {
