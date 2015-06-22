@@ -18,6 +18,10 @@
 - (id)initWithParams: (NSMutableString*)name_ carnivore:(BOOL)carnivore_ wingSpan:(double) wingSpan_;
 - (double)getWingSpan;
 - (void)setWingSpan: (double)wingSpan_;
+//toString must exist here also, because a bird has more properties than the animal
+- (void)toString;
+//extends the equals method with the wingSpan property
+- (BOOL) equals:(Bird*) bird;
 
 
 @end

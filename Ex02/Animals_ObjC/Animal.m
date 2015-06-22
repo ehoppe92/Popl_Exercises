@@ -23,21 +23,37 @@ static int idCounter = 0;
     if(self)
     {
         
-        name = name_;
-        carnivore = carnivore_;
+        [self setName:name_];
+        [self setCarnivore:carnivore_];
+        ID = [Animal generateID];
         
     }
     
-    idCounter++;
-    
     return self;
+}
+
++ (int)generateID
+{
+    return ++idCounter;
 }
 
 - (BOOL)equals: (Animal*)animal_
 {
     
-    //evtl mit isEqual message??
-    return self == animal_;
+    
+    //tests only if the objects are identical, not equal
+    //return self == animal_;
+    
+    if( ([name isEqualToString:[animal_ getName]])
+       && (carnivore == [animal_ isCarnivore]) )
+    {
+        return YES;
+    }
+    else
+    {
+        return NO;
+    }
+    
     
     
 }

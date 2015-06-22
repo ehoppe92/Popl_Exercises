@@ -7,13 +7,14 @@
     //Instanzvariablen
     @private
     BOOL carnivore;
-    int id;
+    int ID;
     NSMutableString* name;
 
 }
 //+ (void) initialize;
 - (id)initWithParams: (NSMutableString*)name_ carnivore:(BOOL)carnivore_;
 - (BOOL)equals: (Animal*)animal_;
++ (int)generateID;
 - (NSMutableString*)getName;
 - (BOOL)isCarnivore;
 - (void)setCarnivore: (BOOL)carnivore_;
