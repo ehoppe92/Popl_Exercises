@@ -36,13 +36,13 @@ int main (int argc, const char * argv[])
         p2 = [p2 initWithParams:animalname2 carnivore: YES wingSpan:12.5];
         [p2 toString];
         
-        NSLog(@"p1 and p2 equal? %d", [p1 equals:p2]);
+        /*NSLog(@"p1 and p2 equal? %d", [p1 equals:p2]);
         
         NSLog(@"change name of animal 2 ");
         [animalname2 setString:@"Testanimal1"];
         [p2 setName:animalname2];
         NSLog(@"Now they should be equal: %d", [p1 equals: p2]);
-        
+        */
         Penguin* p3;
         p3 = [[Penguin alloc] init];
         //create string for the name
@@ -72,13 +72,13 @@ int main (int argc, const char * argv[])
         [s2 setBodyTemperature:temp2];
         [s2 toString];
         
-        Animal* a;
+       /* Animal* a;
         a = [[Animal alloc] init];
         NSMutableString* animalname6 ;
         animalname6 = [[NSMutableString alloc] initWithString:@"Testanimal5"];
                 a = [a initWithParams:animalname5 carnivore:NO];
                 [a toString];
-
+        */
         
 
     }

@@ -20,4 +20,5 @@
 - (void)setCarnivore: (BOOL)carnivore_;
 - (void)setName: (NSMutableString*)name_;
 - (void)toString;
+- (int)getID;
 @end

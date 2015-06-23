@@ -83,7 +83,7 @@ static int idCounter = 0;
 {
     //TODO does not work so far
     
-    //get all instance variables of self
+    //get all instance variables of self -> doesnt work, because gets only the variable of the concrete subclass
     //sort them and print them
     
     unsigned int varCount = 0;
@@ -126,9 +126,14 @@ static int idCounter = 0;
     {
         Ivar cVar = vars[z];
        const char* dname = ivar_getName(cVar);
-        NSLog(@"Property name: %s", dname );
+       // NSLog(@"Property name: %s", dname );
     }
     
+}
+
+-(int)getID
+{
+    return ID;
 }
 
 

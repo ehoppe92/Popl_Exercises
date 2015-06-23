@@ -30,10 +30,11 @@
     return wingSpan;
 }
 
-/*- (void)toString
+- (void)toString
 {
-    //TODO
-}*/
+    //TODO sort
+    NSLog(@"ID: %d Name: %@ Carnivore: %d Wingspan: %f", [self getID], [self getName], [self isCarnivore], [self getWingSpan] );
+}
 
 -(BOOL) equals:(Bird *)bird
 {
