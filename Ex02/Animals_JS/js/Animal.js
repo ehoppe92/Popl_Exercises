@@ -56,10 +56,22 @@ var Animal = function(name, carnivore){
 //METHODEN DER ELTERNKLASSE
 
 Animal.prototype.equals = function(animalOb){
-	if(animalOb === this){
+	
+	if( (this.pName.valueOf() == animalOb.getName().valueOf())
+		&& (this.pCarnivore == animalOb.isCarnivore()) ) 
+	{
 		return true;
 	}
-	return false;
+	else
+	{
+		return false;
+	}
+	
+	
+	/*if(animalOb === this){
+		return true;
+	}
+	return false;*/
  }
 
 Animal.prototype.toString = function(){

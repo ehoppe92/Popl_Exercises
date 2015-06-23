@@ -29,6 +29,26 @@ Bird.prototype.getWingSpan = function(){
 	
 		return this.mWingSpan;
 }
+
+Bird.prototype.equals = function(birdOb){
+	//check super class equality
+	var animalEqality = Object.getPrototypeOf(Bird.prototype).equals(birdOb);
+	
+	if(animalEquality == true)
+	{
+		if( (this.mWingSpan == birdOb.getWingSpan()) )
+		{
+			return true;
+		}
+		return false;
+	}
+	
+	else
+	{
+		return false;
+	}
+	
+ }
 	
 	
 function createBird() {

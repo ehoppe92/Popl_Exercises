@@ -31,6 +31,29 @@ Reptile.prototype.constructor = Reptile;
 
 //Elternklasse-Methoden
 
+Reptile.prototype.equals = function(reptileOb){
+	
+	var animalEqality = Object.getPrototypeOf(Reptile.prototype).equals(reptileOb);
+	
+	if(animalEquality == true)
+	{
+		if( (this.getBodyTemperature() == reptileOb.getBodyTemperature() )
+		{
+			return true;
+		}
+		return false;
+	}
+	
+	else
+	{
+		return false;
+	}
+	
+	
+ }
+
+
+
 function createReptile() {
 	try{
 
