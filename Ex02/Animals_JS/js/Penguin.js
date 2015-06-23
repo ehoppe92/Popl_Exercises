@@ -11,7 +11,7 @@ Penguin.prototype.constructor = Penguin;
 Penguin.prototype.toString = function (){
 	
 	//TODO: nachfragen nach was alphabetisch ordnen (Member Name wie z.B. carnivore oder Wert z.B. true bei carnivore)
-	console.log(this.getName()+"   "+ this.isCarnivore() + " "+ this.getWingSpan() );
+	console.log(this.getID() + "  "+ this.getName()+"   "+ this.isCarnivore() + " "+ this.getWingSpan() );
 	
 }
 

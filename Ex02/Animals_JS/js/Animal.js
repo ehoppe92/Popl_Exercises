@@ -18,6 +18,10 @@ var Animal = function(name, carnivore){
 	}
 	
 	
+
+
+	
+	
 	//unique, protected counter
 	Animal.generateID = function(){
 			if(typeof Animal.idCounter === 'undefined'){
@@ -39,7 +43,7 @@ var Animal = function(name, carnivore){
 		
 	}
 	
-	
+}
 	
 // //	//statischer Counter ??? ausprobieren!
 // //	var uniqueCounter = (function(){
@@ -49,11 +53,15 @@ var Animal = function(name, carnivore){
 // //	})();
 	
 	
-}
 
 
 
 //METHODEN DER ELTERNKLASSE
+
+Animal.prototype.getID = function() {
+		return this.pID;
+}
+
 
 Animal.prototype.equals = function(animalOb){
 	
@@ -78,6 +86,7 @@ Animal.prototype.toString = function(){
 	// //not implemented - abstract 
 	throw new Error ("animal: Absract method!");
 }
+
 
 //
 function createAnimal(){

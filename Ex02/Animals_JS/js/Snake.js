@@ -1,6 +1,6 @@
-var Snake = function(name, carnivore, bodyLength){
+var Snake = function(name, carnivore, bodyTemperature, bodyLength){
 	//calling super constructor
-	Animal.call(this, name, carnivore);
+	Reptile.call(this, name, carnivore, bodyTemperature);
 	
 	//own (subclass) attributes
 	this.setBodyLength = function(bodyLength){
@@ -11,8 +11,8 @@ var Snake = function(name, carnivore, bodyLength){
 		return pBodyLength;
 	}
 	
-	var pBodyLength = this.setBodyLength(bodyLength);
 	
+	var pBodyLength = this.setBodyLength(bodyLength);
 };
 
 Snake.prototype = Object.create(Reptile.prototype);
@@ -22,7 +22,8 @@ Snake.prototype.constructor = Snake;
 Snake.prototype.toString = function (){
 	
 	//TODO: nachfragen nach was alphabetisch ordnen (Member Name wie z.B. carnivore oder Wert z.B. true bei carnivore)
-	console.log(this.getName()+"   "+ this.isCarnivore() + " "+ this.getWingSpan() );
+	console.log(this.getID() + " " + this.getName()+"   "+ this.isCarnivore() + " "+ this.getBodyTemperature() 
+		+ " " + this.getBodyLength());
 	
 }
 
@@ -32,7 +33,7 @@ Snake.prototype.equals = function(snakeOb){
 	
 	if(reptileEquality == true)
 	{
-		if( (this.getBodyLength() == snakeOb.getBodyLength() )
+		if( (this.getBodyLength() == snakeOb.getBodyLength()) )
 		{
 			return true;
 		}

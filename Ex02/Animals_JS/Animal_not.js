@@ -65,15 +65,15 @@ Animal.prototype.setName = function(name){
 
 
 //
-//function create() {
-//		try{
-//
-//	
-//	var m = new Animal ("bla" , "true");
-//	return m;
-//}
-//catch(e){
-//	
-//	return e;
-//}
-//};
+function create() {
+		try{
+
+	
+	var m = new Animal ("bla" , "true");
+	return m;
+}
+catch(e){
+	
+	return e;
+}
+};

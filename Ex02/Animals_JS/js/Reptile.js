@@ -4,16 +4,15 @@ var Reptile = function(name, carnivore, bodyTemperature){
 	
 	this.setBodyTemperature = function(bodyTemperature){
 	
-		pBodyTemperature = bodyTemperature;
+		this.pBodyTemperature = bodyTemperature;
 	}
 
 	this.getBodyTemperature = function(){
-		return pBodyTemperature;
-	
+		return this.pBodyTemperature;
+
 	}
 	
 	//bodyTemperature ist privat
-	
 	var pBodyTemperature = this.setBodyTemperature(bodyTemperature);
 	
 	
@@ -31,13 +30,16 @@ Reptile.prototype.constructor = Reptile;
 
 //Elternklasse-Methoden
 
+
+
+
 Reptile.prototype.equals = function(reptileOb){
 	
 	var animalEqality = Object.getPrototypeOf(Reptile.prototype).equals(reptileOb);
 	
 	if(animalEquality == true)
 	{
-		if( (this.getBodyTemperature() == reptileOb.getBodyTemperature() )
+		if( (this.getBodyTemperature() == reptileOb.getBodyTemperature()) )
 		{
 			return true;
 		}
