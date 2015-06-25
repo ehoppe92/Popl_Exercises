@@ -18,6 +18,9 @@ var Animal = function(name, carnivore){
 	}
 	
 	
+	this.getID = function() {
+		return this.pID;
+	}
 
 
 	
@@ -27,14 +30,16 @@ var Animal = function(name, carnivore){
 			if(typeof Animal.idCounter === 'undefined'){
 				Animal.idCounter = 0;
 			}	
-			 console.log("ID: " + Animal.idCounter);
-			 return Animal.idCounter++;
+			 newId = Animal.idCounter++;
+			 console.log("new id: " + newId);
+			 return newId;
 		}
 
 	// //private eigenschaften
 	var pCarnivore = this.setCarnivore(carnivore); //boolean
 	var pID = Animal.generateID(); //int
 	var pName = this.setName(name); //string
+	
 	
 	
 	// //da abstrakte Klasse
@@ -58,9 +63,6 @@ var Animal = function(name, carnivore){
 
 //METHODEN DER ELTERNKLASSE
 
-Animal.prototype.getID = function() {
-		return this.pID;
-}
 
 
 Animal.prototype.equals = function(animalOb){

@@ -9,9 +9,9 @@ Penguin.prototype.constructor = Penguin;
 
 ////// IMPLEMENTATION OF ABSTRACT METHODS
 Penguin.prototype.toString = function (){
-	
+
 	//TODO: nachfragen nach was alphabetisch ordnen (Member Name wie z.B. carnivore oder Wert z.B. true bei carnivore)
-	console.log(this.getID() + "  "+ this.getName()+"   "+ this.isCarnivore() + " "+ this.getWingSpan() );
+	console.log(this.getName()+"   "+ this.isCarnivore() + " "+ this.getWingSpan() );
 	
 }
 
@@ -26,11 +26,11 @@ function createPenguin() {
 		
 		//var nn = new Penguin("Penguin_1", "true", 42.7);
 		//console.log("nn equals m? " + nn.equals(m));
-		
+		m.toString();
 		var n = new Penguin("Penguin_2", "true", 42.7);
 		//console.log("nn equals m? " + nn.equals(m));
 		
-		m.toString();
+		
 		n.toString();
 		
 		//return m;
