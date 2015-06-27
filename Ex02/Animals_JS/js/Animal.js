@@ -66,7 +66,7 @@ var Animal = function(name, carnivore){
 
 
 Animal.prototype.equals = function(animalOb){
-	
+	console.log("animals equality: " + this.getName());
 	if( (this.pName.valueOf() == animalOb.getName().valueOf())
 		&& (this.pCarnivore == animalOb.isCarnivore()) ) 
 	{

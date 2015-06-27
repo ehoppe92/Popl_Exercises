@@ -18,7 +18,7 @@ var Reptile = function(name, carnivore, bodyTemperature){
 	
 	//da abstrakte Klasse
 	if(this.constructor === Reptile){
-		throw new Error ("Reptile: Cannot instatiate abstract class");
+		throw new Error ("Reptile: Cannot instantiate abstract class");
 		// console.log("Reptile: Cannot instatiate abstract class");
 	}
 	

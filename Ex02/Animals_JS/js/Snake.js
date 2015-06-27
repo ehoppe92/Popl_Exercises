@@ -1,4 +1,4 @@
-var Snake = function(name, carnivore, bodyTemperature, bodyLength){
+var Snake = function(name, carnivore, bodyTemperature){
 	//calling super constructor
 	Reptile.call(this, name, carnivore, bodyTemperature);
 	
@@ -11,8 +11,6 @@ var Snake = function(name, carnivore, bodyTemperature, bodyLength){
 		return this.pBodyLength;
 	};
 	
-	
-	var pBodyLength = this.setBodyLength(bodyLength);
 };
 
 Snake.prototype = Object.create(Reptile.prototype);
@@ -52,12 +50,10 @@ Snake.prototype.equals = function(snakeOb){
 function createSnake() {
 	try{
 		console.log("creating snake...");
-		var snake1 = new Snake ("Snake_1" , "true", 24.5);
-		snake1.setBodyTemperature(23.4);
+		var snake1 = new Snake ("Snake_1" , "true", 23.4);
 		snake1.setBodyLength(24.5);
 		snake1.toString();
-		var snake2 = new Snake("Snake_2", "true", 42.7);
-		snake2.setBodyTemperature(24.6);
+		var snake2 = new Snake("Snake_2", "true", 24.6);
 		snake2.setBodyLength(42.7);
 		snake2.toString();
 	}
