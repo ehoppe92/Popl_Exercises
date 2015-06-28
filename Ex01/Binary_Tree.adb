@@ -53,6 +53,9 @@ procedure Binary_Tree is
    end dft;
    
    N : Node_Pointer;
+   arraySize : Integer := 0;
+   type myArray is array(Integer range <>) of Integer;
+   theArray: myArray(0..Argument_Count);
    
 -- main
 begin
@@ -68,16 +71,24 @@ begin
             Tree(9, null, null)),
          null));
  
-   dft(N);
    
-   --works ; TODO: copy the argumets to nodes
+   
+   --create an array from command line arguments
+   
+    for I in 1..Argument_Count Loop
+	   theArray(I-1) := Integer'Value(Argument(I));
+    end Loop;
+	
+	--create tree from array
+	
+	
+	--call dft
+	dft(N);
+	
+	--destroy tree
+  
    New_Line;
    Destroy_Tree(N);
-   
-   Put(Command_Name & " ");
-   for Arg in 1..Argument_Count loop
-      Put(Argument(Arg) & " ");
-   end loop;
-   New_Line;
+  
    
 end Binary_Tree;
